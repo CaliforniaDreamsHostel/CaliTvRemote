@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@null"
+    android:layout_marginTop="@dimen/dimen_padding_ver_small"
+    android:paddingEnd="@dimen/dimen_padding_hor_large"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        tools:text="Ancilliary"
+        android:id="@+id/local_id_header"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_dark"
+        android:layout_gravity="center_vertical|end"
+        android:textSize="@dimen/dimen_text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+</FrameLayout>

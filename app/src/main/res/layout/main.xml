@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.MainActivity">
+
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/id_local_header"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            style="@style/StyleIcon"
+            android:layout_gravity="start"
+            android:id="@+id/id_local_remote"
+            android:src="@drawable/icon_open_circle" />
+
+        <ImageButton
+            style="@style/StyleIcon.Mini"
+            android:id="@+id/local_id_login"
+            android:layout_gravity="end"
+            android:src="@drawable/icon_lock" />
+    </FrameLayout>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/id_local_header"
+        android:id="@+id/id_local_aligner"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_padding_ver_large"/>
+
+    <android.support.v4.view.ViewPager
+        app:layout_constraintTop_toBottomOf="@id/id_local_aligner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@id/id_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <whompum.com.calitvremote.Main.Tabs.TabViewPager
+        app:layout_constraintTop_toBottomOf="@id/id_local_aligner"
+        app:layout_constraintBottom_toBottomOf="@id/id_local_aligner"
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/local_tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_tab_height"/>
+
+
+</android.support.constraint.ConstraintLayout>
